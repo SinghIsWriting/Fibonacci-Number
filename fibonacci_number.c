@@ -1,10 +1,6 @@
-/*
-
-Fibonacci numbers - 0, 1, 1, 2, 3, 5, 8, 13, 21, ...
-
-*/
 #include <stdio.h>
 
+// Defining a function that implements recursion to calculate the fibonacci number
 int fibonacci(int num){
     if (num == 1 || num == 2){
         return num - 1;
@@ -17,6 +13,7 @@ int fibonacci(int num){
     }
 }
 
+// Defining a function that also implements recursion using array to calculate the fibonacci number
 int iterative_fibonacci(int num){
     int fibo[num];
     fibo[0] = 0;
@@ -33,6 +30,7 @@ int iterative_fibonacci(int num){
     }
 }
 
+// Defining a function that implements iteration to calculate the fibonacci number
 int fibonacci_with_iteration(int num){
     int a=0, b=1;
     for (int i=0; i<num-1; i++){
@@ -46,7 +44,7 @@ int main()
 {
     /* fibonacci number */
     int n;
-    printf("Welcome to my program to get fibonacci number!\n");
+    printf("Welcome to program to calculate the fibonacci number!\n");
     printf("Enter the number n for nth fibonacci number: \n");
     scanf("%d", &n);
 
@@ -54,7 +52,7 @@ int main()
     printf("The %dth fibonacci number using recursion is %d\n", n, fibonacci(n));   // 42th fibonacci = 165580141
 
     // Using iteration
-    printf("The %dth fibonacci number using iteration is %d\n", n, iterative_fibonacci(n));    //  42th fibonacci = 165580141
+    printf("The %dth fibonacci number using iteration with array is %d\n", n, iterative_fibonacci(n));    //  42th fibonacci = 165580141
 
     // Using iteration
     printf("The %dth fibonacci number using iteration is %d\n", n, fibonacci_with_iteration(n));    //  42th fibonacci = 165580141
